@@ -3,15 +3,11 @@ def binary_search(arr, target):
     end = len(arr) - 1
 
     while start <= end:
-        mid = (start + end) // 2  # Find the middle index
-
-        # Check if the target is at the middle
+        mid = (start + end) // 2
         if arr[mid] == target:
             return True
-        # If target is smaller, ignore the right half
         elif arr[mid] > target:
             end = mid - 1
-        # If target is greater, ignore the left half
         else:
             start = mid + 1
 
